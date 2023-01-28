@@ -1,0 +1,38 @@
+.create{
+    padding: 1.3em 4em;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-weight: 900;
+    color: #0075BE;
+    background-color: #FFCC00;
+    border: none;
+    border-radius: 45px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;;
+}
+
+.create:hover{
+    background: #a945c7;
+    box-shadow: 0 0 10px #a945c7, 0 0 40px #a945c7, 0 0 80px #a945c7;
+}
+
+.rutaCreate{
+    text-decoration: none;
+    color: #0075BE;
+}
+
+.filter{
+    background-color: #FFCC00;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #0075BE;
+    font-weight: 700;
+}
+
+.pagination{
+    background: #a945c7;
+    box-shadow: 0 0 10px #a945c7, 0 0 40px #a945c7, 0 0 80px #a945c7;
+}

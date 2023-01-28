@@ -1,0 +1,45 @@
+.page  {
+
+    list-style:none;
+    display: flex;
+    flex-direction:row;
+   
+    padding: 0px 300px 20px;
+    
+    justify-content: space-around;
+    text-align: center;
+}
+
+.number{
+    text-decoration: none;
+    list-style: none;
+}
+
+
+
+  .pagButton {
+    padding: 1.5em 2em;
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: 900;
+    color: #0075BE;
+    background-color: #FFCC00;
+    border: none;
+    border-radius: 45px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+   }
+   
+   pagButton:hover {
+    background-color: #0075BE;
+    box-shadow: 0px 15px 20px #0A285F;
+    color: rgb(255, 255, 255);
+    transform: translateY(-7px);
+   }
+   
+   pagButton:active {
+    transform: translateY(-1px);
+   }
+
