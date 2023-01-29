@@ -79,9 +79,11 @@ export default function Home() {
     
   return (
   <div>
-    
-      <h1>Search Pokemon</h1>
-      <div>
+      {/* <h1 className={styles.h1}>Search Pokemon</h1> */}
+      <div className={styles.navegation}>
+        {/* <div className={styles.container}> */}
+          {/* ////// */}
+
       <button  className={styles.create}>
         <Link className={styles.rutaCreate} to='/create'>Create Pokemon</Link>
       </button>
@@ -89,7 +91,7 @@ export default function Home() {
       </div>
       
 
-    <div>
+    <div className={styles.backcolor}>
 
         <select  className={styles.filter} onChange={e => { handleSort(e)} }>
           <option>ORDER BY NAME</option>
@@ -110,18 +112,17 @@ export default function Home() {
         </select>
 
         <select  className={styles.filter} onChange={e => handleFilterCreated(e)}>
-          <option>CREATOR</option>
+          <option>Creator</option>
           <option value="all">Show all...</option>
           <option value="api">Reals</option>
           <option value="created">Created</option>
         </select>
       </div>
-      
-      <SearchBar />
+      <SearchBar className={styles.searchBar}/>
       <div>
                 {currentPokemons.map((obj) => {
-                 return(
-                        <div>
+                  return(
+                    <div>
 
                             <Link to ={`/pokemons/${obj.id}`} >
                                     <Card 
@@ -135,7 +136,9 @@ export default function Home() {
                         </div>
           )
         })
-        }
+      }
+      {/* </div>  */}
+      {/* ////// */}
         </div>
         <div>
         <Paginado className={styles.pagination}

@@ -21,6 +21,11 @@
     width: 100%;
     border: 1px solid rgba(0, 0, 0,0.2);
     margin-bottom: 20px;
+    
+}
+
+.labelInput{
+    letter-spacing: 2.5px;
 }
 
 .input{
@@ -29,6 +34,7 @@
     color: #ffffff;
     border: 1px solid rgba(0, 0, 0,0.2);
     margin-bottom: 8px;
+    letter-spacing: 2.5px;
 }
 .input:focus{
     outline: 1px solid rgba(71, 77, 161, 0.7)
@@ -41,12 +47,14 @@
     height: 19px; 
     border-radius: 5px;
     background-color: #FFCC00;
+    
 
 }
 
 .formSubmit:hover{
-    background: #a945c7;
-    box-shadow: 0 0 10px #a945c7, 0 0 40px #a945c7, 0 0 80px #a945c7;
+    background-color: #0075BE;
+    box-shadow: 0px 15px 20px #0A285F;
+    color: rgb(255, 255, 255);
 }
 .back{
     border-radius: 5px;
@@ -58,8 +66,9 @@
     
 }
 .back:hover{
-    background: #a945c7;
-    box-shadow: 0 0 10px #a945c7, 0 0 40px #a945c7, 0 0 80px #a945c7;
+    background-color: #be0000;
+    box-shadow: 0px 15px 20px #ff0202;
+    color: rgb(255, 255, 255);
 }
 
 .types {

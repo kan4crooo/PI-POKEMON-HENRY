@@ -16,8 +16,8 @@ export const ORDER_BY_ATTACK= "ORDER_BY_ATTACK";
 export const getPokemons= ()=>{
     return async(dispatch) =>{
         try {
-            const url= "http://localhost:3001/pokemons";
-            let json= await axios.get(url);
+            // const url= "http://localhost:3001/pokemons";
+            let json= await axios.get("http://localhost:3001/pokemons");
             return dispatch({
                 type: GET_POKEMONS,
                 payload: json.data

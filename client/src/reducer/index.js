@@ -42,20 +42,21 @@ const rootReducer= (state= initialState, action)=>{
                 case FILTER_CREATED:
                     const copy= state.allPoke;
                     const filteredCreated=
-                    action.payload==="Created"?
-                    copy.filter(poke=> poke.createdDb):
-                    copy.filter(poke=>!poke.createdDb);
+                    action.payload==="created"?
+                    copy.filter(poke=> poke.createdInDb):
+                    copy.filter(poke=>!poke.createdInDb);
                     return {
                         ...state,
-                        pokemons: action.payload=== "All"? copy: filteredCreated
+                        allPoke: action.payload=== "all"? copy: filteredCreated
                     };
                 case FILTER_TYPE:
-                    let copy2= state.pokemons;
-                    let typeFiltered= action.payload === "all"? copy2: copy2.filter( e=>e.types.some(e=>e.name=== action.payload));
-                    if( typeFiltered.length<=0){
-                        typeFiltered= copy2;
-                        alert("the pokemon type indicated was not found");
-                    };
+                    let copy2= state.allPoke;
+                    let typeFiltered= action.payload === "all"? copy2: copy2.filter( e=>e.types.includes(action.payload));
+                    // if( typeFiltered.length<=0){
+                    //     typeFiltered= copy2;
+                    //     alert("the pokemon type indicated was not found");
+                    // };
+                    alert("filter success")
                     return {
                         ...state, 
                         pokemons: typeFiltered
@@ -76,7 +77,7 @@ const rootReducer= (state= initialState, action)=>{
                     case GET_POKEMON_NAME:
                         return {
                             ...state,
-                            pokemons: action.payload
+                            allPoke: action.payload
                         };
                     case GET_DETAILS:
                         return{
@@ -93,13 +94,13 @@ const rootReducer= (state= initialState, action)=>{
                             ...state
                         };
                     case ORDER_STR:
-                        let copy4= state.pokemons;
+                        let copy4= state.allPoke;
                         let sortedStr= action.payload === "asc"?
                         copy4.sort((a, b)=> a.attack-b.attack):
                         copy4.sort((a, b)=>b.attack-a.attack);
                         return {
                             ...state,
-                            pokemons: sortedStr
+                            allPoke: sortedStr
                         };
                     case ORDER_BY_ATTACK:
                         let sortedAttack= action.payload==="strong"?

@@ -21,11 +21,11 @@ export default function Validations(input) {
     error.speed= 'Speed is mandatory and less than 255';
   }
 
-  if(input.height){
+  if(!input.height){
     error.height= "Height is mandatory";
   }
 
-  if(input.weight){
+  if(!input.weight){
     error.weight= "Weight is mandatory";
   }
 

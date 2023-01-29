@@ -12,14 +12,12 @@
     transition: all 0.3s ease 0s;
     cursor: pointer;
     outline: none;
-
    }
    
-   .buttodetail:hover {
-    background-color: #0075BE;
-    box-shadow: 0px 15px 20px #0A285F;
+   .buttondetail:hover {
+    background-color: #be0000;
+    box-shadow: 0px 15px 20px #ff0202;
     color: rgb(255, 255, 255);
-    transform: translateY(-7px);
    }
    
    .buttondetail:active {
@@ -32,12 +30,27 @@
     font-weight: 900;
     text-align: center;
     text-transform: capitalize;
-    color: #FFCC00;
-    border: 15px solid rgba(0, 0, 0,0.2);
+    color: #000000;
+    border: 15px solid rgba(0, 0, 0, 0.558);
+    letter-spacing: 2.5px;
 }
 
 p {
   font-family: Sono-Regular;
     font-size: 40px;
     text-transform: capitalize;
+}
+
+.card{
+
+  float: center;
+  width:450px;
+  height: 650px;
+  background-color: rgba(33, 71, 161, 0.971);
+  border-radius: 10px;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  margin-left: 530px;
+  text-align: center;
+  transition: all 0.25s;
 }

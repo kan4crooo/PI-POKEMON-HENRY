@@ -25,11 +25,11 @@ console.log(myPokemon)
 
 console.log(myPokemon)
   return (
-    <div>
+    <div >
        
         {
             myPokemon.length>0?
-            <div className={styles.form}>
+            <div className={styles.card}>
                 <h1>{myPokemon[0].name}</h1>
                 <img src= {myPokemon[0].image} alt='' width= '200px' height= '250px'/>
                 <h3>Types: {myPokemon[0].types.map(e => e + " ")}</h3>                    

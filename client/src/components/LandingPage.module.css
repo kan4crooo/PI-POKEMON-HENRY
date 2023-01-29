@@ -1,18 +1,4 @@
 .button{
-    /* margin-top: 230px;
-    margin-left: auto;
-    margin-right: auto;
-    position:relative;
-    display: inline-block;
-    padding: 25px 40px;
-    color: #fff;
-    letter-spacing: 4px;
-    font-size: 24px;
-    text-decoration: none;
-    overflow: hidden;
-    transition: 0.2s;
-    background-color: black; */
-
     padding: 1.3em 4em;
     font-size: 10px;
     text-transform: uppercase;
@@ -29,6 +15,7 @@
 }
 
 .button:hover{
-    background: #a945c7;
-    box-shadow: 0 0 10px #a945c7, 0 0 40px #a945c7, 0 0 80px #a945c7;
+    background-color: #0075BE;
+    box-shadow: 0px 15px 20px #0A285F;
+    color: rgb(255, 255, 255);
 }

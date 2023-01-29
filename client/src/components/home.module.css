@@ -1,38 +1,60 @@
+/* .container{
+    float: left;
+    
+} */
+
 .create{
     padding: 1.3em 4em;
-    font-size: 10px;
+    font-size: 9px;
     text-transform: uppercase;
     letter-spacing: 2.5px;
-    font-weight: 900;
-    color: #0075BE;
+    font-weight: 800;
+    /* color: #0075BE; */
     background-color: #FFCC00;
     border: none;
-    border-radius: 45px;
     box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease 0s;
     cursor: pointer;
-    outline: none;;
+    outline: none;
+    float: left;
+    margin-top: 15px;
+    width: 12.5%;
+    height: 39px;
 }
 
 .create:hover{
-    background: #a945c7;
-    box-shadow: 0 0 10px #a945c7, 0 0 40px #a945c7, 0 0 80px #a945c7;
+    background-color: #0075BE;
+    box-shadow: 0px 15px 20px #0A285F;
+    color: rgb(255, 255, 255);
 }
+
+/* .navegation{
+
+    background-color: #0075BE;
+} */
+
 
 .rutaCreate{
     text-decoration: none;
     color: #0075BE;
 }
 
+
+
 .filter{
+    width: 10.5%;
+    height: 40px;
     background-color: #FFCC00;
-    border-radius: 5px;
     cursor: pointer;
     color: #0075BE;
     font-weight: 700;
+    float: left;
+    margin-top: 15px;
+    letter-spacing: 2.5px;
 }
 
-.pagination{
-    background: #a945c7;
-    box-shadow: 0 0 10px #a945c7, 0 0 40px #a945c7, 0 0 80px #a945c7;
+.filter:hover{
+    background-color: #0075BE;
+    box-shadow: 0px 15px 20px #0A285F;
+    color: rgb(255, 255, 255);
 }

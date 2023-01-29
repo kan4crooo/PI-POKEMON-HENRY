@@ -1,12 +1,41 @@
+/* .backcolor{
+    background-color: #0075BE;
+    margin-top: 10px;
+} */
+
+
 .searchInput{
+    width: 20.5%;
+    height: 34px;
     background-color: #FFCC00;
-    border-radius: 5px;
     cursor: pointer;
+    float: right;
+    margin-top: 15px;
+    letter-spacing: 2.5px;
+    outline: none;
+    padding-left: 5px;
+    
+
 }
 
 .searchButton{
     background-color: #FFCC00;
-    border-radius: 5px;
     cursor: pointer;
     font-weight: 700;
+    width: 100px;
+    height: 42px;
+    float: right;
+    margin-top: 15px;
+    letter-spacing: 2.5px;
+    width: 10%;;
+    
+    
 }
+
+.searchButton:hover{
+    background-color: #0075BE;
+    box-shadow: 0px 5px 20px #0A285F;
+    color: rgb(255, 255, 255);
+}
+
+

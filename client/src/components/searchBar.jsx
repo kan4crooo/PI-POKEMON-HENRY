@@ -22,7 +22,7 @@ export default function SearchBar() {
     setName("");
   }
   return (
-    <form>
+    <form className={styles.backcolor}>
       <input className={styles.searchInput} type= "text" placeholder= 'Search...'
       onChange={e=>{handleInputChange(e)}} value={name}></input>
       <button className={styles.searchButton} type="submit" onClick={e=>handleSubmit(e)}>Search</button>

@@ -28,7 +28,7 @@ const objPokeApi= (e)=>{
         speed: e.stats[5].base_stat,
         height: e.height,
         weight:e.weight,
-        image: e.sprites.other.home.fornt_default,
+        image: e.sprites.other.home.front_default,
         types: e.types.length< 2? [e.types[0].type.name]: [e.types[0].type.name, e.types[1].type.name],
     };
     return objPokeApi
