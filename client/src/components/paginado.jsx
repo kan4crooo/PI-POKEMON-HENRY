@@ -9,16 +9,16 @@ export default function Paginado({pokemonPerPage, tpokemons, page}) {
     // if(indexOfLastPokemon<tpokemons.length){
     //    currentPage=currentPage+1
     // }
-    console.log(pageNumber.push(i))
+    // console.log(pageNumber.push(i))
     pageNumber.push(i);
   }
   return (
     <nav>
       <ul className={styles.page}>
         { pageNumber && pageNumber.map((number)=>(
-          <li className={styles.number} key={number}>
+          <li className={styles.number}>
             {/* <button prevHandler={prevHandler}>prev</button> */}
-            <button onClick={()=>page(number)} className={styles.pagButton}>{number}</button>
+            <button onClick={()=>page(number)} className={styles.pageButton}>{number}</button>
             {/* <button nextHandler={nextHandler}>next</button> */}
           </li>
         ))}

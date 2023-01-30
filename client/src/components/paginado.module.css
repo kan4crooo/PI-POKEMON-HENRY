@@ -1,13 +1,12 @@
 .page  {
-
     list-style:none;
     display: flex;
-    flex-direction:row;
+    flex-direction: row;
     justify-content: space-around;
     text-align: center;
-    float: right;
-    padding-right: 670px;
-    margin-right: 2px;
+    float: left;
+    padding-left: 670px; 
+    margin-bottom: auto;
 }
 
 .number{
@@ -17,11 +16,11 @@
 
 
 
-  .pagButton {
+  .pageButton {
     padding: 0.5em 2.5em;
-    font-size: 15px;
-    text-transform: uppercase;
+    text-transform: capitalize;
     font-weight: 900;
+    font-size: 15px;
     color: #0075BE;
     background-color: #FFCC00;
     border: none;
@@ -32,14 +31,14 @@
     outline: none;
    }
    
-   .pagButton:hover {
+   .pageButton:hover {
     background-color: #0075BE;
     box-shadow: 0px 15px 20px #0A285F;
     color: rgb(255, 255, 255);
     transform: translateY(-7px);
    }
    
-   .pagButton:active {
+   .pageButton:active {
     transform: translateY(-1px);
    }
 

@@ -1,7 +1,7 @@
 const axios = require('axios');
 const { Pokemon, Type }= require("../db.js");
 
-let url= `https://pokeapi.co/api/v2/pokemon/`;
+let url= `https://pokeapi.co/api/v2/pokemon?limit=40`;
 
 const getPokeApi= async()=>{
 try {
@@ -22,7 +22,7 @@ const objPokeApi= (e)=>{
     const objPokeApi= {
         id: e.id,
         name: e.name,
-        health: e.stats[0].base_stat,
+        hp: e.stats[0].base_stat,
         attack: e.stats[1].base_stat,
         defense: e.stats[2].base_stat,
         speed: e.stats[5].base_stat,
@@ -42,7 +42,7 @@ const getPokeFromDb= async()=>{
         return {
             id: pokemonDb.dataValues.ID,
             name: pokemonDb.dataValues.name,
-            health: pokemonDb.dataValues.hp,
+            hp: pokemonDb.dataValues.hp,
             attack: pokemonDb.dataValues.attack,
             defense: pokemonDb.dataValues.defense,
             speed: pokemonDb.dataValues.speed,

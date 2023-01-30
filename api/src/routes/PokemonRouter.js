@@ -51,7 +51,7 @@ pokemonRoutes.get("/", async(req, res)=>{
 });
 
 pokemonRoutes.post("/", async(req, res)=>{
-    const {name, hp, attack, defense, speed, height, weight, image, createdInDb, types}= req.body;
+    const {name, hp, attack, defense, speed, height, weight, image, createdInDb, type}= req.body;
     try {
         if(name){
             const allPoke4= await getAllPoke();
@@ -67,11 +67,11 @@ pokemonRoutes.post("/", async(req, res)=>{
                     weight,
                     image,
                     createdInDb,
-                    types,
+                    type,
                 });
                 const typeByDb= await Type.findAll({
                     where:{
-                        name: types,
+                        name: type,
                     }
                 });
                 pokemon.addType(typeByDb);

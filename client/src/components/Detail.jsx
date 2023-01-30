@@ -48,7 +48,7 @@ console.log(myPokemon)
             </div>  
         }   
         <p>
-            <Link to='/home' ><button className={styles.buttondetail}>Return</button></Link>
+            <Link to='/home' ><button className={styles.buttondetail}>Back</button></Link>
         </p>
     </div>
 )

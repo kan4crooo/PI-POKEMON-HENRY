@@ -18,35 +18,19 @@ export default function Home() {
   const types= useSelector((state)=>state.types)
   
   const [currentPage, setCurrentPage]= useState(1);
-  const [pokemonPerPage]= useState(12);
+  const [pokemonPerPage, setPokemonPerPage]= useState(12);
   const indexOfLastPokemon= currentPage* pokemonPerPage;
   const indexOfFirstPokemon= indexOfLastPokemon-pokemonPerPage;
   console.log(tpokemons)
-  const currentPokemons= tpokemons?.slice(indexOfFirstPokemon, indexOfLastPokemon);
-  // const nextPage= currentPage+1;
-  // console.log(nextPage)
-  const page= (pageNumber)=> setCurrentPage(pageNumber);
-  
-  
-  
-  // const currentPokemons= tpokemons.slice(indexOfFirstPokemon, indexOfLastPokemon);
-  // console.log(currentPokemons)
-  // const paginado= (pageNumber)=>{
-  //   setCurrentPage(pageNumber)
-  // }
+  const currentPokemons= tpokemons.slice(indexOfFirstPokemon, indexOfLastPokemon);
+  const page= (pageNumber)=> {setCurrentPage(pageNumber)};
+ 
+
   const [orden, setOrden]= useState("")
   
-    // const nextPage= currentPage+1;
-    // const lastIndex= nextPage* pokemonPerPage;
-    // const indexOfFirstPokemon= lastIndex - 10
-    // const currentPokemons= tpokemons.slice(indexOfFirstPokemon ,lastIndex )
-    // const page=setCurrentPage(nextPage);
-    // if(lastIndex===tpokemons.length) return;
-    
     useEffect(()=>{
       dispatch(getPokemons())
       dispatch(getAllTypes())
-      // console.log("Me ejecute")
     }, [dispatch])
 
     const handleClick= (e)=>{
@@ -79,10 +63,8 @@ export default function Home() {
     
   return (
   <div>
-      {/* <h1 className={styles.h1}>Search Pokemon</h1> */}
+      
       <div className={styles.navegation}>
-        {/* <div className={styles.container}> */}
-          {/* ////// */}
 
       <button  className={styles.create}>
         <Link className={styles.rutaCreate} to='/create'>Create Pokemon</Link>
@@ -98,7 +80,7 @@ export default function Home() {
           <option value="asc">Ascending order</option>
           <option value="desc">Descending order</option>
         </select>
-
+        
         <select  className={styles.filter} onChange={e => { handleSortAttack(e); } }>
           <option>STRENGTH</option>
           <option value="strong">Strong attack</option>
@@ -127,7 +109,7 @@ export default function Home() {
                             <Link to ={`/pokemons/${obj.id}`} >
                                     <Card 
                                         name={obj.name}
-                                        sprite={obj.sprite}
+                                        image={obj.image}
                                         types={obj.types}
                                         id={obj.id}
                                         key={obj.id}
@@ -137,17 +119,15 @@ export default function Home() {
           )
         })
       }
-      {/* </div>  */}
-      {/* ////// */}
         </div>
         <div>
+      </div>
         <Paginado className={styles.pagination}
           pokemonPerPage={pokemonPerPage}
           tpokemons={tpokemons.length}
-          key= {tpokemons.length}
-          page={page} 
-          />    
-      </div>
+          key={tpokemons.length}
+          page={page}
+          />
         </div>
   )
 }

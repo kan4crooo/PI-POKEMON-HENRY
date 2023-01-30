@@ -56,10 +56,9 @@ const rootReducer= (state= initialState, action)=>{
                     //     typeFiltered= copy2;
                     //     alert("the pokemon type indicated was not found");
                     // };
-                    alert("filter success")
                     return {
                         ...state, 
-                        pokemons: typeFiltered
+                        pokemons: typeFiltered.length? typeFiltered: [`${action.payload} Pokemons`]
                     };
                     case ORDER_NAME:
                         let copy3= state.pokemons;

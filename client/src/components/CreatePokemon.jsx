@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react';
 import {Link} from "react-router-dom";
 import { postPokemon, getAllTypes } from '../actions';
 import { useDispatch, useSelector } from 'react-redux';
-import Validaciones from "../components/Validations";
+import Validations from "../components/Validations";
 import styles from "./createPokemon.module.css";
 
 
@@ -33,7 +33,7 @@ export default function CreatePokemon() {
       ...input,
       [e.target.name]: e.target.value
     })
-    setError(Validaciones({...input, [e.target.name]:e.target.value}))
+    setError(Validations({...input, [e.target.name]:e.target.value}))
   }
   function handleSelect(e){
     setInput({
