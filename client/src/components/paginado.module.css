@@ -1,34 +1,43 @@
 .page  {
-    list-style:none;
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin-left: 43%;
+    margin-right: 43%;
+    /* padding: 260px; */
+    width: 10%;
+    height: 5vh;
+    gap: 0.3vw;
+    margin-bottom: 95px;
     float: left;
-    padding-left: 670px; 
-    margin-bottom: auto;
 }
 
 .number{
     text-decoration: none;
     list-style: none;
+    margin-top: 100px;
 }
 
 
 
   .pageButton {
-    padding: 0.5em 2.5em;
+
+    display: flex;
+    flex-direction: row;
+    padding: 0.5em 5.5em;
     text-transform: capitalize;
     font-weight: 900;
     font-size: 15px;
     color: #0075BE;
     background-color: #FFCC00;
-    border: none;
+    /* border: none; */
     border-radius: 45px;
     box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease 0s;
+    transition: all 0.3s;
     cursor: pointer;
     outline: none;
+    /* margin-bottom: 1em; */
+    /* margin-left: 180%; */
    }
    
    .pageButton:hover {

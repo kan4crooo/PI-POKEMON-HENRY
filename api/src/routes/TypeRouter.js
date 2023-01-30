@@ -1,7 +1,8 @@
-const { default: axios } = require('axios');
+const axios  = require('axios');
 const { Router }= require('express');
+// const express = require("express")
 // const getTypeApi= require('../controllers/getTypes
-const { Pokemon, Type }= require('../db');
+const {Type }= require('../db');
 
 const typeRoutes= Router();
 
@@ -18,6 +19,7 @@ typeRoutes.get("/", async(req, res)=>{
             });
         });
         const allTypes= await Type.findAll();
+        // console.log(allTypes)
         return res.status(200).send(allTypes);
     } catch (error) {
         console.log(error);

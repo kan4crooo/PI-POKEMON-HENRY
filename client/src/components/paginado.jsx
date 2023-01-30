@@ -15,7 +15,7 @@ export default function Paginado({pokemonPerPage, tpokemons, page}) {
   return (
     <nav>
       <ul className={styles.page}>
-        { pageNumber && pageNumber.map((number)=>(
+        {pageNumber&&pageNumber.map((number)=>(
           <li className={styles.number}>
             {/* <button prevHandler={prevHandler}>prev</button> */}
             <button onClick={()=>page(number)} className={styles.pageButton}>{number}</button>

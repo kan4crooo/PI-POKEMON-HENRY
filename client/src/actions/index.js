@@ -67,7 +67,7 @@ export const orderName= (payload)=>{
 
 export const filterType= (payload)=>{
     return {
-        type: ORDER_STR,
+        type: "FILTER_TYPE",
         payload
     };
 };
@@ -123,7 +123,7 @@ export const postPokemon= (payload)=>{
 
 export function orderByAttack(payload){
     return {
-        type: "ORDER_BY_ATTACK",
+        type: ORDER_BY_ATTACK,
         payload
     }
 }

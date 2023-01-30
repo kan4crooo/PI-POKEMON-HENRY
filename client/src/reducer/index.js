@@ -50,16 +50,16 @@ const rootReducer= (state= initialState, action)=>{
                         allPoke: action.payload=== "all"? copy: filteredCreated
                     };
                 case FILTER_TYPE:
-                    let copy2= state.allPoke;
-                    let typeFiltered= action.payload === "all"? copy2: copy2.filter( e=>e.types.includes(action.payload));
-                    // if( typeFiltered.length<=0){
-                    //     typeFiltered= copy2;
-                    //     alert("the pokemon type indicated was not found");
-                    // };
-                    return {
-                        ...state, 
-                        pokemons: typeFiltered.length? typeFiltered: [`${action.payload} Pokemons`]
-                    };
+                    let copyTwo = state.pokemons;
+            let typeFiltered = action.payload === 'all' ? copyTwo: copyTwo.filter(e => e.types.includes(e => e.name.toLowerCase() === action.payload.toLowerCase()));
+            if(typeFiltered.length <= 0){
+                typeFiltered = copyTwo;   
+                alert('There are no pokemon of the indicated type');
+            }
+            return {
+                ...state,
+                allPoke: typeFiltered
+            };
                     case ORDER_NAME:
                         let copy3= state.pokemons;
                         let sortedName= action.payload==="asc"?

@@ -36,6 +36,12 @@ export default function CreatePokemon() {
     setError(Validations({...input, [e.target.name]:e.target.value}))
   }
   function handleSelect(e){
+    // if(!input.type.includes(e.target.value)){
+    //   var find= types.filter(
+    //     (e)=> e.id=== Number(e.target.value)
+    //   );
+    //   setInput({...input})
+    // }
     setInput({
       ...input,
       type:[...input.type, e.target.value],

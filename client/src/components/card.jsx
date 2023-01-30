@@ -12,7 +12,7 @@ export default function Card({name, image, id, types }) {
     <div  className={styles.card}>
       <img src={image?image: noImage} alt="Img not found"/>
       <h2 className={styles.h2}>{name}</h2>
-           <div>
+           <div className={styles.types}>
             {types?.map((e)=>{
               return  (
                 <div>

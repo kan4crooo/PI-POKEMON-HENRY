@@ -1,40 +1,37 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
 
 .card{
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-    grid-gap: 20px 20px;
-    padding: 10px 50px 20px;
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* padding: 50px 60px 35px; */
     justify-content: center;
-    float: inline-start;
     float: left;
     background-color: rgba(33, 71, 161, 0.776);
     border-radius: 10px;
     box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
     overflow: hidden;
-    margin: 20px;
+    margin-right: 72px;
+    margin-left: 62px;
+    margin-bottom: 10px;
+    margin-top: 30px;
     transition: all 0.25s;
-    align-items: center;
-    /* border: 15px solid rgba(0, 0, 0, 0.558); */
-    @media (max-width: 900px) {
-        & {
-          padding-bottom: 10px;
-        }
-      }
 }
 
 .card:hover{
-    transform: translateY(-20px);
+    transform: translateY(-15px);
     box-shadow: 0 12px 36px rgba(0, 255, 72, 0.2);
 }
 .card img{
     
-    width: 130px;
-    height: 220px
+    width: 120px;
+    height: 180px
 }
 
 .h2{
-    margin-top: -12px;
+    justify-content: left;
+    margin-top: -15px;
     font-size: 600;
     color: #010101;
     font-family: 'Oswald', sans-serif;
@@ -48,6 +45,16 @@
     font-family: 'Oswald', sans-serif;
     font-size: larger;
     font-weight: 900;
+    text-decoration: none;
+    letter-spacing: 2.5px;
+    text-transform: capitalize;
+}
+
+.types{
+    margin-bottom: 5%;
+    font-size: 600;
+    color: #010101;
+    font-family: 'Oswald', sans-serif;
     text-decoration: none;
     letter-spacing: 2.5px;
     text-transform: capitalize;

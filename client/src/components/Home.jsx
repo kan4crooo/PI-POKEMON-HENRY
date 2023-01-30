@@ -107,7 +107,7 @@ export default function Home() {
                     <div>
 
                             <Link to ={`/pokemons/${obj.id}`} >
-                                    <Card 
+                                    <Card
                                         name={obj.name}
                                         image={obj.image}
                                         types={obj.types}
