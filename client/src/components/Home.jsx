@@ -87,20 +87,20 @@ export default function Home() {
           <option value="weak">Weaker attack</option>
         </select>
 
-        <select  className={styles.filter} onChange={(e) => { handleFilterType(e); } }>
+        <select  className={styles.filter} onChange={(e) => { handleFilterType(e) } }>
           <option>By Type</option>
           {types?.map((e) => (
             <option value={e.name}>{e.name}</option>))}
         </select>
 
-        <select  className={styles.filter} onChange={e => handleFilterCreated(e)}>
+        <select  className={styles.filter} onChange={e => handleFilterCreated(e)} setCurrentPage={setCurrentPage}>
           <option>Creator</option>
-          <option value="all">Show all...</option>
+
           <option value="api">Reals</option>
           <option value="created">Created</option>
         </select>
       </div>
-      <SearchBar className={styles.searchBar}/>
+      <SearchBar className={styles.searchBar} setCurrentPage={setCurrentPage}/>
       <div>
                 {currentPokemons.map((obj) => {
                   return(

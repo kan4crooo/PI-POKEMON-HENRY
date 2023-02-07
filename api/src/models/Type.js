@@ -10,6 +10,7 @@ module.exports= (sequelize)=>{
         // },
         name: {
             type: DataTypes.STRING,
+            unique: true
         },
     },{createdAt: false,
         updateAt: false,

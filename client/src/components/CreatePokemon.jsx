@@ -47,6 +47,12 @@ export default function CreatePokemon() {
       type:[...input.type, e.target.value],
     });
   }
+  function handleDelete(option){
+    setInput({
+      ...input,
+      type: input.type.filter(type=>type !== option)
+    })
+  }
 
   function handleSubmit(submit){
     submit.preventDefault();
@@ -71,7 +77,7 @@ export default function CreatePokemon() {
                      
                      <div className={styles.labelInput}>
                       <label>NAME:</label>
-                      <input className={styles.input}
+                      <input className={styles.input} required
                       type="text"
                       value={input.name}
                       name= "name"
@@ -82,6 +88,8 @@ export default function CreatePokemon() {
                      <div className={styles.labelInput}>
                       <label>HP:</label>
                       <input className={styles.input}
+                      max={255}
+                      required
                       type="number"
                       value={input.hp}
                       name="hp"
@@ -92,6 +100,8 @@ export default function CreatePokemon() {
                      <div className={styles.labelInput}>
                       <label>ATTACK</label>
                       <input className={styles.input}
+                      max={255}
+                      required
                       type="number"
                       value={input.attack}
                       name="attack"
@@ -102,6 +112,7 @@ export default function CreatePokemon() {
                      <div className={styles.labelInput}>
                       <label>WEIGHT</label>
                       <input className={styles.input}
+                      required
                       type="number"
                       value={input.weight}
                       name="weight"
@@ -112,6 +123,8 @@ export default function CreatePokemon() {
                      <div className={styles.labelInput}>
                       <label>SPEED:</label>
                       <input className={styles.input}
+                      max={255}
+                      required
                       type="number"
                       value= {input.speed}
                       name="speed"
@@ -121,7 +134,8 @@ export default function CreatePokemon() {
 
                      <div className={styles.labelInput}>
                       <label>HEIGHT:</label>
-                      <input className={styles.input}
+                      <input className={styles.input} 
+                      required
                       type="number"
                       value={input.height}
                       name="height"
@@ -131,7 +145,9 @@ export default function CreatePokemon() {
 
                      <div className={styles.labelInput}>
                       <label>DEFENSE:</label>
-                      <input className={styles.input}
+                      <input className={styles.input} 
+                      max={255}
+                      required
                       type="number"
                       value={input.defense}
                       name="defense"
@@ -141,7 +157,7 @@ export default function CreatePokemon() {
 
                      <div className={styles.labelInput}>
                       <label>IMAGE:</label>
-                      <input className={styles.input}
+                      <input className={styles.input} required
                       type="text"
                       value={input.image}
                       name="image"
@@ -155,14 +171,21 @@ export default function CreatePokemon() {
                      <div>
                      <select   className={styles.types} onChange={(selection)=> handleSelect(selection)}>
                       {types.map((ty)=>(
-                        <option value={ty.name} key={ty.id}>
+                        <option value={ty.name} key={ty.name}>
                           {ty.name}
                         </option>
                       ))}
                      </select>
                       </div>
                       <div>
-                        <ul><li>{input.type.map(select=>(select+" "))}</li></ul>
+                        {input.type.map((e)=>{
+                          return (
+                            <div>
+                              <h5 className={styles.types2}>{e}</h5>
+                              <button className={styles.delete} onClick={()=> {handleDelete(e)}}>x</button>
+                            </div>
+                          );
+                        })}
                       </div>
                       <button className={styles.formSubmit} type="submit">Create Pokemon</button>
                       <Link to="/home"><button  className={styles.back}>Back</button></Link>

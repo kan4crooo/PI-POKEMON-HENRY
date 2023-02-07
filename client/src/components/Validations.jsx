@@ -6,19 +6,19 @@ export default function Validations(input) {
   if(!input.name || validateName.test(input.name)){
     error.name= "Name is mandatory";
   }
-  if(!input.hp){
-    error.hp= ' Hp is mandatory';
+  if(!input.hp || input.hp>255){
+    error.hp= ' Hp is mandatory and less than 255';
   }
-  if(!input.attack){
-    error.attack= 'Attack is mandatory';
-  }
-
-  if(!input.defense){
-    error.defense= 'Defense is mandatory';
+  if(!input.attack|| input.attack>255){
+    error.attack= 'Attack is mandatory and less than 255';
   }
 
-  if(!input.speed){
-    error.speed= 'Speed is mandatory';
+  if(!input.defense|| input.defense>255){
+    error.defense= 'Defense is mandatory  and less than 255';
+  }
+
+  if(!input.speed|| input.speed>255){
+    error.speed= 'Speed is mandatory and less than 255';
   }
 
   if(!input.height){

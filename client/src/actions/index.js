@@ -11,6 +11,7 @@ export const GET_DETAILS= "GET_DETAILS";
 export const CLEAN_DETAIL= "CLEAN_ DETAIL";
 export const CLEAN_POKEMONS= "CLEAN_POKEMONS";
 export const ORDER_BY_ATTACK= "ORDER_BY_ATTACK";
+export const FILTER_REALS= "FILTER_REALS";
 
 
 export const getPokemons= ()=>{
@@ -56,7 +57,12 @@ export const filterCreated= (payload)=>{
         payload
     };
 };
-
+export const filterReals= ()=>{
+    return {
+        type: FILTER_REALS,
+        payload
+    }
+}
 
 export const orderName= (payload)=>{
     return {
@@ -67,7 +73,7 @@ export const orderName= (payload)=>{
 
 export const filterType= (payload)=>{
     return {
-        type: "FILTER_TYPE",
+        type: FILTER_TYPE,
         payload
     };
 };

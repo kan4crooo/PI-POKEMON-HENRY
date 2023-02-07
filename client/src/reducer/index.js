@@ -10,7 +10,8 @@ import {
     POST_POKEMON,
     GET_DETAILS,
     CLEAN_DETAIL,
-    CLEAN_POKEMONS
+    CLEAN_POKEMONS,
+    FILTER_REALS
 } from "../actions/index";
 
 const initialState= {
@@ -27,7 +28,6 @@ const rootReducer= (state= initialState, action)=>{
             ...state,
             pokemons: action.payload,
             allPoke: action.payload,
-            
          };
          case CLEAN_POKEMONS:
             return {
@@ -49,13 +49,27 @@ const rootReducer= (state= initialState, action)=>{
                         ...state,
                         allPoke: action.payload=== "all"? copy: filteredCreated
                     };
+                case FILTER_REALS:
+                    const filteredReals= action.payload==="api"
+                    return {
+                        ...state,
+                        pokemons: filteredReals.filter(e=>e.name===action.payload)
+                    }
+                // case "FILTER_SHOW_ALL":
+                //     // const copyShow= state.allPoke;
+                //     const filteredShow= action.payload==="all"
+                //     return {
+                //         ...state,
+                //         allPoke: action.payload
+                //     }
                 case FILTER_TYPE:
-                    let copyTwo = state.pokemons;
-            let typeFiltered = action.payload === 'all' ? copyTwo: copyTwo.filter(e => e.types.includes(e => e.name.toLowerCase() === action.payload.toLowerCase()));
-            if(typeFiltered.length <= 0){
-                typeFiltered = copyTwo;   
-                alert('There are no pokemon of the indicated type');
-            }
+                    let copyTwo = state.allPoke
+            let typeFiltered = action.payload==="all"? copyTwo: copyTwo.filter(pokemon =>{
+                for (let types of pokemon.types) {
+                    if(action.payload===types)
+                    return pokemon
+                }
+            });
             return {
                 ...state,
                 allPoke: typeFiltered
